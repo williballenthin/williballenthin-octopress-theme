@@ -1,4 +1,4 @@
-$sidebar-width: 300px;
+$sidebar-width: 250px;
 $inner-width: 600px;
 $max-width: $sidebar-width + $inner-width;
 
@@ -46,7 +46,7 @@ a{
 .inner{
 	width: $inner-width;
 	margin: 0 0;
-	margin-left: $sidebar-width + 20px;
+	margin-left: $sidebar-width + 40px;
 //	@media screen and (max-width: 1040px){
 //		width: 100%;
 //	}
