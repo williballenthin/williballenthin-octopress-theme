@@ -1,0 +1,13 @@
+$sidebar-color: #dddddd;
+
+.sidebar{
+	width: $sidebar-width;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	
+	background-color: $sidebar-color;
+	border-right: 1px solid darken($sidebar-color, 10);
+	
+}
