@@ -1,14 +1,28 @@
-
 <div class="sidebar">
-
   <div class="logo">
-    
+    <img src="{{ site.logo }}" alt="logo {{ site.logo }}" />
   </div>
-
 
   <nav>
     <ul>
-      <li><a href="{{ root_url }}/">{{ site.title }}</a></li>
+      <li>
+	<a href="{{ root_url }}/">{{ site.title }}</a>
+	{% include custom/site_links.html %}
+      </li>
+
+      {% if site.github_user %}
+      <li><a class="github" 
+	 href="https://github.com/{{ site.github_user }}" 
+	 title="GitHub">
+	GitHub</a></li>
+      {% endif %}
+
+      {% if site.twitter_user %}
+      <li><a class="twitter" 
+	 href="http://twitter.com/{{ site.twitter_user }}" 
+	 title="Twitter">
+	Twitter</a></li>
+      {% endif %}
 
       {% if site.facebook_user %}
       <li><a class="facebook" 
@@ -18,67 +32,72 @@
       {% endif %}
 
       {% if site.googleplus_user and site.googleplus_hidden == false %}
-      <a class="google" 
+      <li><a class="google" 
 	 href="https://plus.google.com/{{ site.googleplus_user }}?rel=author" 
 	 title="Google+">
-	Google+</a>
-      {% endif %}
-      
-      {% if site.twitter_user %}
-      <a class="twitter" 
-	 href="http://twitter.com/{{ site.twitter_user }}" 
-	 title="Twitter">
-	Twitter</a>
-      {% endif %}
-
-      {% if site.github_user %}
-      <a class="github" 
-	 href="https://github.com/{{ site.github_user }}" 
-	 title="GitHub">
-	GitHub</a>
+	Google+</a></li>
       {% endif %}
       
       {% if site.pinboard_user %}
-      <a class="pinboard" 
+      <li><a class="pinboard" 
 	 href="https://pinboard.in/u:{{ site.pinboard_user }}" 
 	 title="Pinboard">
-	Pinboard</a>
+	Pinboard</a></li>
       {% endif %}
       
       {% if site.coderwall_user %}
-      <a class="coderwall" 
+      <li><a class="coderwall" 
 	 href="https://coderwall.com/{{ site.coderwall_user }}" 
 	 title="Coderwall">
-	Coderwall</a>
+	Coderwall</a></li>
       {% endif %}
 
       {% if site.linkedin_user %}
-      <a class="linkedin" 
+      <li><a class="linkedin" 
 	 href="http://www.linkedin.com/in/{{ site.linkedin_user }}"
 	 title="LinkedIn">
-	LinkedIn</a>
+	LinkedIn</a></li>
       {% endif %}
 
       {% if site.pinterest_user %}
-      <a class="pinterest" 
+      <li><a class="pinterest" 
 	 href="https://pinterest.com/{{ site.pinterest_user }}" 
 	 title="Pinterest">
-	Pinterest</a>
+	Pinterest</a></li>
       {% endif %}
 
       {% if site.delicious_user %}
-      <a class="delicious" 
+      <li><a class="delicious" 
 	 href="http://delicious.com/{{ site.delicious_user }}" 
 	 title="Delicious">
-	Delicious</a>
+	Delicious</a></li>
       {% endif %}
 
       {% if site.subscribe_rss %}
-      <a class="rss" 
+      <li><a class="rss" 
 	 href="{{ site.subscribe_rss }}" 
 	 title="RSS">
-	RSS</a>
+	RSS</a></li>
       {% endif %}
+
+      <li>
+	<form action="{{ site.simple_search }}" 
+	      method="get"
+	      class="search">
+          <input type="text" name="q" 
+		 results="0" placeholder="search" />
+          <input type="hidden" name="q" 
+		 value="site:{{ site.url | shorthand_url }}" />
+        </form>
+      </li>
+
+      {% if site.email %}
+      <li><a class="email" 
+	     href="mailto:{{ site.email }}" 
+	     title="Email">
+	  Contact</a></li>
+      {% endif %}
+
     </ul>
   </nav>
 

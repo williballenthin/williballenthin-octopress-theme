@@ -2,9 +2,8 @@
 {% include head.html %}
 
 <body>
-	<header id="header" class="inner">{% include header.html %}</header>
-	{% unless page.banner == false %}
-		{% include banner.html %}
+	{% unless page.sidebar == false %}
+		{% include sidebar.html %}
 	{% endunless %}
 	<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
 	<footer id="footer" class="inner">{% include footer.html %}</footer>
