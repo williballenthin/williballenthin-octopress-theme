@@ -27,47 +27,45 @@ $logo-width: 100px;
 	}
     }
     
-    nav{
-	ul{
-	    border-top: 1px solid darken($sidebar-color, 10); 
+    ul{
+	border-top: 1px solid darken($sidebar-color, 10); 
+	
+	li{
+	    border-bottom: 1px solid darken($sidebar-color, 10); 
+	    padding: 15px 30px;
+	    
+	    a{
+		font-weight: bold;
+	    }
+	    
+	    ul.site_links{
+		border-top: none;
+		
+		li{
+		    padding: 0px 10px;
+		    list-style: none;
+		    border: none;
 
-	    li{
-		border-bottom: 1px solid darken($sidebar-color, 10); 
-		padding: 15px 30px;
-
-		a{
-		    font-weight: bold;
-		}
-
-		ul.site_links{
-		    border-top: none;
-
-		    li{
-			padding: 0px 10px;
-			list-style: none;
-			border: none;
-
-			a{
-			    font-weight: normal;
-			}
+		    a{
+			font-weight: normal;
 		    }
 		}
 	    }
-	    li:hover{
-		border-right: 3px solid darken($sidebar-color, 10); 		
-	    }
 	}
-
-        li .search {
-	    input[type="text"]{
-		background-color: lighten($sidebar-color, 10);
-                border: 1px solid darken($sidebar-color, 10);
-                border-right: none;
-                color: $color-gray02;
-                font: 13px $font-default;
-                height: 30px;
-                @include border-radius(5px 5px 5px 5px);
-            }
+	li:hover{
+	    border-right: 3px solid darken($sidebar-color, 10); 		
 	}
+    }
+    
+    li .search {
+	input[type="text"]{
+	    background-color: lighten($sidebar-color, 10);
+            border: 1px solid darken($sidebar-color, 10);
+            border-right: none;
+            color: $color-gray02;
+            font: 13px $font-default;
+            height: 30px;
+            @include border-radius(5px 5px 5px 5px);
+        }
     }
 }

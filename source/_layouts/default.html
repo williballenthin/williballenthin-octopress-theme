@@ -2,10 +2,10 @@
 {% include head.html %}
 
 <body>
+	<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
 	{% unless page.sidebar == false %}
 		{% include sidebar.html %}
 	{% endunless %}
-	<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
 	<footer id="footer" class="inner">{% include footer.html %}</footer>
 	{% include after_footer.html %}
 </body>
