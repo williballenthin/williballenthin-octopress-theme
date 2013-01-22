@@ -5,7 +5,7 @@
 
   <nav>
     <ul>
-      <li>
+      <li class="home_entry">
 	<a href="{{ root_url }}/">{{ site.title }}</a>
 	{% include custom/site_links.html %}
       </li>
@@ -80,7 +80,7 @@
 	RSS</a></li>
       {% endif %}
 
-      <li>
+      <li class="search_entry">
 	<form action="{{ site.simple_search }}" 
 	      method="get"
 	      class="search">
