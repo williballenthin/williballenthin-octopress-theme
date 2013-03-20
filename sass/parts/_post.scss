@@ -1,6 +1,6 @@
 .post{
 	h2.title, .entry-content{
-		margin-left: 200px;
+		margin-left: 0px;
 		@media screen and (max-width: 800px){
 			margin-left: 0;
 		}
@@ -8,11 +8,13 @@
 	.meta{
 		position: absolute;
 		top: 85px;
+		left: 600px;
+		margin-left: 25px;
 		line-height: 2;
 		font-size: 0.9em;
 		color: $color-gray02;
 		width: 170px;
-		@media screen and (max-width: 800px){
+		@media screen and (max-width: 1050px){
 			margin-top: 15px;
 			position: static;
 			width: auto;

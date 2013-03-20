@@ -60,6 +60,7 @@ $logo-width: 100px;
         font: 13px $font-default;
         height: 30px;
         margin-top: 10px;
+	padding-left: 10px;
         @include border-radius(5px 5px 5px 5px);
       }
     }
@@ -144,6 +145,7 @@ $logo-width: 100px;
           color: $color-gray02;
           font: 13px $font-default;
           height: 30px;
+	  padding-left: 10px;
           @include border-radius(5px 5px 5px 5px);
         }
       }
