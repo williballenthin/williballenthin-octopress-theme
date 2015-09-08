@@ -82,7 +82,7 @@ html .gist .gist-file {
 }
 pre {
   background: $pre-bg $noise-bg;
-  @include border-radius(.4em);
+  @include border-radius(0);
   @extend .mono;
   border: 1px solid $pre-border;
   line-height: 1.45em;
@@ -107,7 +107,7 @@ p, li {
     line-height: 1.5em;
     color: #555;
     border: 1px solid #ddd;
-    @include border-radius(.4em);
+    @include border-radius(0);
     padding: 0 .3em;
     margin: -1px 0;
   }
@@ -210,7 +210,7 @@ $solar-scroll-thumb: rgba(#fff, .2);
 
 pre, .highlight, .gist-highlight {
   &::-webkit-scrollbar {  height: .5em; background: $solar-scroll-bg; }
-  &::-webkit-scrollbar-thumb:horizontal { background: $solar-scroll-thumb;  -webkit-border-radius: 4px; border-radius: 4px }
+  &::-webkit-scrollbar-thumb:horizontal { background: $solar-scroll-thumb; }
 }
 
 .highlight code { 
